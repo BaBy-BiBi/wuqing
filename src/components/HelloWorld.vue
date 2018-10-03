@@ -84,12 +84,20 @@
 </template>
 
 <script>
+import axios from 'axios'
 export default {
   name: 'HelloWorld',
   data () {
     return {
       msg: 'Welcome to Your Vue.js App'
     }
+  },
+  async mounted () {
+    let res = await axios.get('/V1/category?type=3')
+    let res1 = await axios.get('/V1/swaper/3')
+    let res2 = await axios.get('/V1/list/3')
+    let res3 = await axios.get('/V1/detail/3')
+    console.log(res, res1, res2, res3)
   }
 }
 </script>

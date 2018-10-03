@@ -7,6 +7,8 @@ import router from './router'
 import './assets/css/common.css'
 import './assets/less/common.less'
 
+require('./util/mock')
+
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
